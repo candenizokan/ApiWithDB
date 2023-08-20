@@ -7,6 +7,6 @@ namespace Api.DataAccess.Repositories.Abstract
 {
     internal interface IEmployeeRepository
     {
-        Employee
+        Employee CreateEmployee(Employee employee);//aldığı employee nesnesini veritabanına ekler ve eklediğini geri döner
     }
 }
