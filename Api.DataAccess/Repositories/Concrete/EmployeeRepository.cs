@@ -46,9 +46,17 @@ namespace Api.DataAccess.Repositories.Concrete
             return _context.Employees.Max(a=>a.ID);// id kolonundaki max değeri bulduk
         }
 
-        public Employee UpdateEmploye(Employee employee)
+        public Employee UpdateEmploye(Employee employee)// günceli içeri aktarmamız lazım
         {
-            throw new NotImplementedException();
+            Employee updated = GetEmployee(employee.ID);
+            updated.FirstName = employee.FirstName;
+            updated.LastName = employee.LastName;
+            updated.Department = employee.Department;
+
+            _context.Employees.Update(updated);
+            _context.SaveChanges();
+
+            return employee;
         }
     }
 }
