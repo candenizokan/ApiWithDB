@@ -43,7 +43,7 @@ namespace Api.DataAccess.Repositories.Concrete
 
         public int MaxId()
         {
-            throw new NotImplementedException();
+            return _context.Employees.Max(a=>a.ID);// id kolonundaki max değeri bulduk
         }
 
         public Employee UpdateEmploye(Employee employee)
