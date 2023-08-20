@@ -15,5 +15,10 @@ namespace Api.Api.Controllers
             _service = service;
         }
 
+
+        public IActionResult Get()
+        {
+
+        }
     }
 }
