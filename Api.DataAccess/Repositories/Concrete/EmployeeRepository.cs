@@ -8,15 +8,12 @@ using System.Text;
 namespace Api.DataAccess.Repositories.Concrete
 {
     public class EmployeeRepository : IEmployeeRepository
-    {
-        //bir sınıfın içerisinde crud işlemleri için context sınıfım lazım. bunu di ile almam lazım
-
-
-
+    {//bir sınıfın içerisinde crud işlemleri için context sınıfım lazım. bunu di ile almam lazım
+        private readonly ProjectContext _context;
 
         public EmployeeRepository(ProjectContext context)
         {
-
+            _context = context;
         }
 
         public Employee CreateEmployee(Employee employee)
