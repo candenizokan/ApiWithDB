@@ -8,6 +8,16 @@ namespace Api.DataAccess.Repositories.Concrete
 {
     public class EmployeeRepository : IEmployeeRepository
     {
+        //bir sınıfın içerisinde crud işlemleri için context sınıfım lazım. bunu di ile almam lazım
+
+
+
+
+        public EmployeeRepository()
+        {
+
+        }
+
         public Employee CreateEmployee(Employee employee)
         {
             throw new NotImplementedException();
