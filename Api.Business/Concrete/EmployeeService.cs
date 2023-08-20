@@ -11,7 +11,7 @@ namespace Api.Business.Concrete
     {//bazı kurallar dahilinde repoya iş yaptırmak istiyorum.///// soyut istiyorum somut ver diyorum. bunu startupta mutlaka söyleyeceğim
         private readonly IEmployeeRepository _repository;
 
-        public EmployeeService(IEmployeeRepository repository)
+        public EmployeeService(IEmployeeRepository repository)//constructor injektion
         {
             _repository = repository;
         }
