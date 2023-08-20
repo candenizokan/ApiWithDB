@@ -25,7 +25,9 @@ namespace Api.DataAccess.Repositories.Concrete
 
         public void DeleteEmployee(int id)
         {
-            throw new NotImplementedException();
+            Employee employee = GetEmployee(id);// önce ilgili id li emloyeyi bul
+            _context.Employees.Remove(employee);
+            _context.SaveChanges();
         }
 
         public List<Employee> GetAllEmployees()
