@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Api.Business.Concrete
 {
-    public class EmployeeService
+    public class EmployeeService: IEmployeeService
     {
     }
 }
