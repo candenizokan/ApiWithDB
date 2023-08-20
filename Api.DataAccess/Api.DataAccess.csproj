@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Api.Model\Api.Model.csproj" />
+  </ItemGroup>
+
 </Project>
