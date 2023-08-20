@@ -39,7 +39,8 @@ namespace Api.Business.Concrete
 
         public Employee UpdateEmploye(Employee employee)
         {
-            throw new NotImplementedException();
+            if (employee != null) _repository.UpdateEmploye(employee);
+            return employee ;
         }
     }
 }
