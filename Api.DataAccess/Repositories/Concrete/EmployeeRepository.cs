@@ -3,6 +3,7 @@ using Api.DataAccess.Repositories.Abstract;
 using Api.Model.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Api.DataAccess.Repositories.Concrete
@@ -32,7 +33,7 @@ namespace Api.DataAccess.Repositories.Concrete
 
         public List<Employee> GetAllEmployees()
         {
-            throw new NotImplementedException();
+            return _context.Employees.ToList();// contextin içinde employeleri listele dedim
         }
 
         public Employee GetEmployee(int id)
