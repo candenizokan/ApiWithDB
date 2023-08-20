@@ -45,6 +45,7 @@ namespace Api.Api.Controllers
         }
 
         [HttpPut]
+        [Route("PutEmployee")]
         public IActionResult Put([FromBody] Employee employee)
         {
             if (_service.GetEmployee(employee.ID) != null) return Ok(_service.UpdateEmploye(employee));
