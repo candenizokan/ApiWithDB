@@ -29,10 +29,14 @@ namespace Api.Api.Controllers
             return Ok(employee);
         }
 
-        //[HttpGet("{id}")]//lokalhost/api/employee/id
+        //[HttpGet("{id}")]//localhost/api/employee/id
 
         [HttpGet]
-        [Route("getWithid/{id}")]//lokalhost/api/employee/getWithid/id
+        [Route("getWithid/{id}")]//localhost/api/employee/getWithid/id
+
+
+        [HttpGet]
+        [Route("[action]/{id}")]// localhost/api/employee/GetEmployeeById/id
         public IActionResult GetEmployeeById(int id)
         {
             var employee= _service.GetEmployee(id);
