@@ -17,7 +17,8 @@ namespace Api.Business.Concrete
         }
         public Employee CreateEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            if(employee != null) _repository.CreateEmployee(employee);
+            return employee;
         }
 
         public void DeleteEmployee(int id)
