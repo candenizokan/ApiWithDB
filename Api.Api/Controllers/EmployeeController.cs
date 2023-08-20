@@ -8,9 +8,11 @@ namespace Api.Api.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
+        private readonly IEmployeeService _service;
+
         public EmployeeController(IEmployeeService service)//ben abstract isteyeceğim o concrete verecek
         {
-
+            _service = service;
         }
 
     }
