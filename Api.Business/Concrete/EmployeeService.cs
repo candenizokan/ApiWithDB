@@ -28,7 +28,7 @@ namespace Api.Business.Concrete
 
         public List<Employee> GetAllEmployees()
         {
-            throw new NotImplementedException();
+            return _repository.GetAllEmployees(); 
         }
 
         public Employee GetEmployee(int id)
