@@ -7,5 +7,10 @@ namespace Api.Api.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
+        public EmployeeController()//ben abstract isteyeceğim o concrete verecek
+        {
+
+        }
+
     }
 }
