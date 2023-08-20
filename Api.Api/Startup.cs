@@ -1,4 +1,8 @@
-﻿using Api.DataAccess.Context;
+﻿using Api.Business.Abstract;
+using Api.Business.Concrete;
+using Api.DataAccess.Context;
+using Api.DataAccess.Repositories.Abstract;
+using Api.DataAccess.Repositories.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +38,9 @@ namespace Api.Api
             });
 
             //bu noktada çalıştırırsam patlarım. 
+            //patlamamak için soyut istediğimde somut ver demem lazım aşağıdaki addscoped ekliyorum
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
