@@ -51,5 +51,16 @@ namespace Api.Api.Controllers
             return BadRequest();
             
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            if (_service.GetEmployee(id) != null)
+            {
+                _service.DeleteEmployee(id);
+                return Ok();
+            }
+            else return NotFound();
+        }
     }
 }
