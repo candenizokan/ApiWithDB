@@ -7,5 +7,20 @@ namespace Api.DataAccess.Context
 {
     public class ProjectContext : DbContext
     {
+
+        //connection string
+        //tabloların
+        //konfigurasyonları dbcontextte yapıyorum
+
+
+
+        public ProjectContext(DbContextOptions<ProjectContext> options) : base(options)
+        {
+
+        }
+
+
+
+
     }
 }
