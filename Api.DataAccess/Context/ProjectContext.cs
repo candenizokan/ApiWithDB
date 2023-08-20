@@ -11,7 +11,7 @@ namespace Api.DataAccess.Context
 
         //connection string
         //tabloların
-        //konfigurasyonları dbcontextte yapıyorum
+        //konfigurasyonları(ilişkiler vs) dbcontextte yapıyorum
 
 
 
