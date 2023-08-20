@@ -23,7 +23,7 @@ namespace Api.Business.Concrete
 
         public void DeleteEmployee(int id)
         {
-            throw new NotImplementedException();
+            if(id>0 && id<= _repository.MaxId()) _repository.DeleteEmployee(id);
         }
 
         public List<Employee> GetAllEmployees()
