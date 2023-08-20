@@ -1,4 +1,5 @@
-﻿using Api.DataAccess.Repositories.Abstract;
+﻿using Api.DataAccess.Context;
+using Api.DataAccess.Repositories.Abstract;
 using Api.Model.Models;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Api.DataAccess.Repositories.Concrete
 
 
 
-        public EmployeeRepository()
+        public EmployeeRepository(ProjectContext)
         {
 
         }
