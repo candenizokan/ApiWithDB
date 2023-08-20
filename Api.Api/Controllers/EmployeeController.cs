@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Api.Business.Abstract;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Api.Controllers
@@ -7,7 +8,7 @@ namespace Api.Api.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        public EmployeeController()//ben abstract isteyeceğim o concrete verecek
+        public EmployeeController(IEmployeeService service)//ben abstract isteyeceğim o concrete verecek
         {
 
         }
