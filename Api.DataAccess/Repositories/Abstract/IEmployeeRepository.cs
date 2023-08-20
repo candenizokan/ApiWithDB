@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Api.DataAccess.Repositories.Abstract
 {
-    internal interface IEmployeeRepository
+    public interface IEmployeeRepository
     {
         Employee CreateEmployee(Employee employee);//aldığı employee nesnesini veritabanına ekler ve eklediğini geri döner
 
