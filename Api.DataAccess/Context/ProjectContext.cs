@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Api.DataAccess.Context
 {
-    public class ProjectContext
+    public class ProjectContext : DbContext
     {
     }
 }
