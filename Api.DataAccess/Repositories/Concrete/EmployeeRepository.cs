@@ -35,7 +35,7 @@ namespace Api.DataAccess.Repositories.Concrete
 
         public Employee GetEmployee(int id)
         {
-            throw new NotImplementedException();
+            return _context.Employees.Find(id);
         }
 
         public int MaxId()
