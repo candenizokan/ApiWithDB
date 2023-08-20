@@ -9,5 +9,14 @@ namespace Api.Business.Abstract
     {
 
         List<Employee> GetAllEmployees();
+
+        Employee GetEmployee(int id);
+
+        Employee CreateEmployee(Employee employee);
+        
+        Employee UpdateEmploye(Employee employee);
+
+        void DeleteEmployee(int id);
+
     }
 }
