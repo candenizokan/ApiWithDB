@@ -1,4 +1,5 @@
 ﻿using Api.Business.Abstract;
+using Api.Model.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,13 @@ namespace Api.Api.Controllers
         public IActionResult Get()
         {
             return Ok(_service.GetAllEmployees());
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Employee employee)
+        {
+            var created = _service.CreateEmployee(employee);
+            return Ok(employee);
         }
     }
 }
