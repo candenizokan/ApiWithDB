@@ -7,7 +7,7 @@ using System.Text;
 namespace Api.Business.Concrete
 {
     public class EmployeeService : IEmployeeService
-    {
+    {//bazı kurallar dahilinde repoya iş yaptırmak istiyorum.
         public Employee CreateEmployee(Employee employee)
         {
             throw new NotImplementedException();
