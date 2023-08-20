@@ -1,4 +1,5 @@
 ﻿using Api.Business.Abstract;
+using Api.DataAccess.Repositories.Abstract;
 using Api.Model.Models;
 using System;
 using System.Collections.Generic;
