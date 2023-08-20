@@ -43,5 +43,13 @@ namespace Api.Api.Controllers
             if(employee!=null) return Ok(employee);
             return NotFound(); 
         }
+
+        [HttpPut]
+        public IActionResult Put([FromBody] Employee employee)
+        {
+            if (_service.GetEmployee(employee.ID) != null) return Ok(_service.UpdateEmploye(employee));
+            return BadRequest();
+            
+        }
     }
 }
