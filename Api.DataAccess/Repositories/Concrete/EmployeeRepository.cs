@@ -14,7 +14,7 @@ namespace Api.DataAccess.Repositories.Concrete
 
 
 
-        public EmployeeRepository(ProjectContext)
+        public EmployeeRepository(ProjectContext context)
         {
 
         }
