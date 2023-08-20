@@ -14,5 +14,7 @@ namespace Api.DataAccess.Repositories.Abstract
         List<Employee> GetAllEmployees();
 
         Employee UpdateEmploye(Employee employee); // aldığı güncel employee nesnesine işlem yapar ve geri döner
+
+        void DeleteEmployee(int id); // id sini bildiği nesneyi siler, geriye değer dönmez
     }
 }
