@@ -20,7 +20,7 @@ namespace Api.DataAccess.Context
 
         }
 
-        public DbSet<Employee> MyProperty { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
 
 
