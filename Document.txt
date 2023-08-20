@@ -19,3 +19,17 @@ DATA ACCESS katmanımız => Class Library olarak proje açıp
 
 
 							Context oluşturulurken Mic.Efcore.SQLServer paketi, göç için Mic.EfCore.Tools Paketi istenir.
+
+
+
+------------------------------------------------
+
+BUSİNESS katmanımız için => class library projesi oluşturdul.
+							Repolara kurallı şekilde iş yaptırırken bu metodlarında önce soyut(interface) ve sonra implemente edilmiş-somut- sınıflarını oluşturacağız.
+							EmployeeService içinde IEmployeeRepository çağıracağız ama aslında iş yaptırmak için EmployeeRepository çağırmış olacağız. bu yüzden muhakkak startup içinde register(kayıt) yapmalıyız.
+
+API katmanı için => Api projesini açacağız.
+					Henüz göç tamamlanmadığı için öncelikli olarak appStting.json'a connectionStringimizi oluşturduk ve startupda AddDbContexti eklemesini yaptık. Connection string ve context sınıfı ayrı katmanlarda olacağı için Mic.Efcore.Design paketini de projeye uyumlu şekilde indirmeliyiz.
+
+ÇOK ÖNEMLİ NOT : Göç esnasında solitionda seçili proje : startUp klasörünün olduğu proje, 
+					Package Manager Console da default proje : Context sınıfı barındıran proje olmalı.
