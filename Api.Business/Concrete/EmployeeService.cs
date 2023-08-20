@@ -33,7 +33,8 @@ namespace Api.Business.Concrete
 
         public Employee GetEmployee(int id)
         {
-            throw new NotImplementedException();
+            if (id > 0 && id <= _repository.MaxId()) return _repository.GetEmployee(id);
+            throw new Exception("Silmek istediğiniz id'yi kontrol ediniz.");
         }
 
         public Employee UpdateEmploye(Employee employee)
