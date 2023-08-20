@@ -28,5 +28,13 @@ namespace Api.Api.Controllers
             var created = _service.CreateEmployee(employee);
             return Ok(employee);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetEmployeeById(int id)
+        {
+            var employee= _service.GetEmployee(id);
+            if(employee!=null) return Ok(employee);
+            return NotFound(); 
+        }
     }
 }
