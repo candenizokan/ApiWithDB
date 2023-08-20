@@ -18,7 +18,9 @@ namespace Api.DataAccess.Repositories.Concrete
 
         public Employee CreateEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            _context.Employees.Add(employee);//Employees dbset
+            _context.SaveChanges();
+            return employee;
         }
 
         public void DeleteEmployee(int id)
