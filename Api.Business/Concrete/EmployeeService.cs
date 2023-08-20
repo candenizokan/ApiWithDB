@@ -9,7 +9,7 @@ namespace Api.Business.Concrete
     public class EmployeeService : IEmployeeService
     {//bazı kurallar dahilinde repoya iş yaptırmak istiyorum.///// soyut istiyorum somut ver diyorum. bunu startupta mutlaka söyleyeceğim
 
-        public EmployeeService()
+        public EmployeeService(IEmployeeRepository repository)
         {
 
         }
