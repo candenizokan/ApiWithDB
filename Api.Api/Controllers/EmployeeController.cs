@@ -18,7 +18,7 @@ namespace Api.Api.Controllers
 
         public IActionResult Get()
         {
-
+            return Ok(_service.GetAllEmployees());
         }
     }
 }
